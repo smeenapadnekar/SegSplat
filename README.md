@@ -38,8 +38,7 @@ Our method enriches each Gaussian with compact semantic embeddings learned via a
 
 ## Citation
 ```
-## Citation
-```
+
 Padnekar, S.M., Mitra, K., Das, S. (2027). Semantic-Guided 3D Gaussian Splatting for Sparse View Reconstruction and Segmentation. In: De Marsico, M., et al. Pattern Recognition. ICPR 2026. Lecture Notes in Computer Science, vol 16824. Springer, Cham. https://doi.org/10.1007/978-3-032-31927-2_14
 
 
