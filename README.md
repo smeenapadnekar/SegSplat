@@ -37,10 +37,10 @@ We introduce SemanticSplat, a unified framework that leverages the mutual inform
 Our method enriches each Gaussian with compact semantic embeddings learned via a novel Distilled Prototype Contrastive Loss, combined with 3D intra- and inter-class regularization to enforce local semantic consistency in 3D space. To adaptively allocate representational capacity, we propose a learnable semantics-aware density control strategy that dynamically splits, scales, or removes Gaussians based on semantic region and uncertainty. Furthermore, we mitigate sparse supervision with a consistency-aware pseudo-view generator that uses geometry-conditioned ControlNet diffusion to refine intermediate renders without hallucinating content, providing view-consistent pseudo-supervision. Extensive experiments on three diverse datasets demonstrate that our method significantly outperforms recent few-shot baselines, delivering sharper object boundaries, more accurate semantic segmentation, and higher-fidelity novel view synthesis, particularly under sparse-view constraints.*
 
 ## Citation
-```
-
-Padnekar, S.M., Mitra, K., Das, S. (2027). Semantic-Guided 3D Gaussian Splatting for Sparse View Reconstruction and Segmentation. In: De Marsico, M., et al. Pattern Recognition. ICPR 2026. Lecture Notes in Computer Science, vol 16824. Springer, Cham. https://doi.org/10.1007/978-3-032-31927-2_14
 
 
-```
+> *Padnekar, S.M., Mitra, K., Das, S. (2027). Semantic-Guided 3D Gaussian Splatting for Sparse View Reconstruction and Segmentation. In: De Marsico, M., et al. Pattern Recognition. ICPR 2026. Lecture Notes in Computer Science, vol 16824. Springer, Cham. https://doi.org/10.1007/978-3-032-31927-2_14
+
+
+
 
