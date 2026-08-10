@@ -1,0 +1,32 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda-11.1/bin/nvcc
+
+cflags = -pthread -B /home/vplab/anaconda3/envs/gs/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include/TH -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include/THC -I/usr/local/cuda-11.1/include -I/home/vplab/anaconda3/envs/gs/include/python3.8 -c
+post_cflags = -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_Csimple -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++14
+cuda_cflags = -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include/TH -I/home/vplab/anaconda3/envs/gs/lib/python3.8/site-packages/torch/include/THC -I/usr/local/cuda-11.1/include -I/home/vplab/anaconda3/envs/gs/include/python3.8 -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_Csimple -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++14
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+build /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/backward.o: cuda_compile /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/cuda_rasterizer/backward.cu
+build /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/forward.o: cuda_compile /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/cuda_rasterizer/forward.cu
+build /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/rasterizer_impl.o: cuda_compile /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu
+build /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/ext.o: compile /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/ext.cpp
+build /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o: cuda_compile /media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/rasterize_points.cu
+
+
+
+
+

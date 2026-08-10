@@ -1,0 +1,8 @@
+# ninja log v5
+0	2634	1748985645888764345	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/backward.o	374619130f156648
+1	3345	1748985646596768982	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/forward.o	77d04418c738a62b
+1	7711	1748985650956797529	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/rasterizer_impl.o	c804bf5b5a933df6
+1	20747	1748985663980882784	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/ext.o	66f20006e8cfa039
+2	42800	1748985686041027124	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o	508bcd181fd6d5bc
+8	6593	1748985781113648338	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/rasterizer_impl.o	c804bf5b5a933df6
+11	1950	1748987001775651816	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/forward.o	77d04418c738a62b

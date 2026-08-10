@@ -1,0 +1,4 @@
+# ninja log v5
+0	9901	1750159908715402979	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o	a4e94d06311958e0
+0	20392	1750159919207542507	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o	9410a063a3ca726f
+0	49765	1750159948579927817	/media/vplab/6b43b65c-0636-45e8-b1a2-033acce48735/Meena/3DGD/FewShot/joint_gs_seg/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o	e5aff0106f908141
